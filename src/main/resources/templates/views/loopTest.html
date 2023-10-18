@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Thymeleaf Loop Test</title>
+</head>
+<body>
+<h2>StudentDTO Thymeleaf Loop Test</h2>
+<hr />
+<table th:border="1">
+  <tr>
+    <th>ID</th>
+    <th>이름</th>
+    <th>이메일</th>
+    <th>주소</th>
+  </tr>
+  <tr th:each="ict: ${list}">
+    <td th:text="${ict.id}">id</td>
+    <td th:text="${ict.name}">name</td>
+    <td th:text="${ict.email}">email</td>
+    <td th:text="${ict.address}">address</td>
+  </tr>
+</table>
+
+</body>
+</html>

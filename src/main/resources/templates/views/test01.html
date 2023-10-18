@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Test</title>
+</head>
+<body>
+<h1>환영합니다...Thymeleaf!!!</h1>
+<h2>th:text attribute</h2>
+<!--<div>th:text를 사용 : <span>스마트IT학부</span></div>-->
+<div>th:text를 사용 : <span th:text="${msg}">정보통신학부</span></div>
+<div>th:text를 사용 : <span th:text="${ict}">스마트IT학부</span></div>
+
+<h2>String과 함께 사용 : [[${msg}]]</h2>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Test</title>
+</head>
+<body>
+<form action="/ict01/formTest" method="post">
+    <!--formTest.html 파일에서 input 필드의 th:name 속성은 ${ict}로 설정되어 있음. 이는 formTest 메서드에서 model.addAttribute("ict", "smartIT");를 통해 설정된 ict 값을 참조함
+    따라서 실제 HTML에서 이 input 필드의 이름은 smartIT로 설정됨./>-->
+    <!--변경전/>-->
+    <!--    <input type="text" name="test1" value="ict" class="mytest" th:name="${ict}" th:value="${ict}"/>-->
+    <!--변경후/>-->
+    <input type="text" name="test1" value="ict" class="mytest" th:value="${ict}"/>
+    <!--    <input type="text" name="test2" value="thmeleaf" class="mytest" th:name="${ict}" th:value="${ict}"/>-->
+    <br />
+    <br />
+
+
+    <input type="submit" value="Server로 전송"/>
+</form>
+</body>
+</html>
